@@ -7,11 +7,13 @@ public class PlayerMove : MonoBehaviour
     private float Speed = 5.0f;
 
     Rigidbody2D _rigidbody;
+    Animator _animator;
     private float _horizontalDir; // Horizontal move direction value [-1, 1]
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -19,6 +21,14 @@ public class PlayerMove : MonoBehaviour
         Vector2 velocity = _rigidbody.linearVelocity;
         velocity.x = _horizontalDir * Speed;
         _rigidbody.linearVelocity = velocity;
+
+        _animator.SetBool("Walking", _horizontalDir != 0);
+
+        //spin the character
+        if (_horizontalDir != 0)
+        {
+            transform.localScale = new Vector3(Mathf.Sign(_horizontalDir), 1, 1);
+        }
     }
 
     // NOTE: InputSystem: "move" action becomes "OnMove" method
