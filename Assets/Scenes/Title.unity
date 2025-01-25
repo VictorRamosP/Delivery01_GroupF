@@ -694,8 +694,8 @@ Transform:
   m_GameObject: {fileID: 1049649646}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -0.6534, z: 0}
-  m_LocalScale: {x: 3.0011723, y: 2.378497, z: 1}
+  m_LocalPosition: {x: -0.0087, y: -0.4971, z: 0}
+  m_LocalScale: {x: 3.642307, y: 2.4436061, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1029,6 +1029,7 @@ MonoBehaviour:
   SFXSource: {fileID: 2098275041}
   background: {fileID: 8300000, guid: a5a3cafe43a7c78478d23102be439fb4, type: 3}
   jump: {fileID: 0}
+  coin: {fileID: 0}
 --- !u!4 &1939937454
 Transform:
   m_ObjectHideFlags: 0
