@@ -21,6 +21,13 @@ public class PlayerJumper : MonoBehaviour
 
     bool IsWallSliding => _collisionDetection.IsTouchingFront;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -41,6 +48,7 @@ public class PlayerJumper : MonoBehaviour
     // NOTE: InputSystem: "JumpStarted" action becomes "OnJumpStarted" method
     public void OnJumpStarted()
     {
+        audioManager.PlaySFX(audioManager.jump);
         if (JumpsDone != MaxJumps) {
             JumpsDone++;
             SetGravity();
