@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 125534311}
   - component: {fileID: 125534310}
   - component: {fileID: 125534309}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -737,6 +737,8 @@ MonoBehaviour:
   SpeedHorizontal: 2
   PressTimeToMaxJump: 0.5
   WallSlideSpeed: 1
+  MaxJumps: 1
+  JumpsDone: 0
   filter:
     useTriggers: 0
     useLayerMask: 1
@@ -1108,7 +1110,7 @@ GameObject:
   - component: {fileID: 257504122}
   - component: {fileID: 257504124}
   - component: {fileID: 257504123}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1695,7 +1697,7 @@ GameObject:
   - component: {fileID: 497161671}
   - component: {fileID: 497161673}
   - component: {fileID: 497161672}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2193,7 +2195,7 @@ GameObject:
   - component: {fileID: 630209527}
   - component: {fileID: 630209526}
   - component: {fileID: 630209525}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2328,7 +2330,7 @@ GameObject:
   - component: {fileID: 816852350}
   - component: {fileID: 816852349}
   - component: {fileID: 816852348}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2464,7 +2466,7 @@ GameObject:
   - component: {fileID: 931649296}
   - component: {fileID: 931649295}
   - component: {fileID: 931649294}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2883,7 +2885,7 @@ GameObject:
   - component: {fileID: 1537617905}
   - component: {fileID: 1537617907}
   - component: {fileID: 1537617906}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3452,6 +3454,7 @@ GameObject:
   - component: {fileID: 1821473471}
   - component: {fileID: 1821473470}
   - component: {fileID: 1821473469}
+  - component: {fileID: 1821473472}
   m_Layer: 0
   m_Name: PowerUp
   m_TagString: Untagged
@@ -3575,6 +3578,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1821473472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821473468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dae71264635e824aae5dcbe957cd301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Power: higherJump
 --- !u!1 &1918508235
 GameObject:
   m_ObjectHideFlags: 0
@@ -3752,7 +3768,7 @@ GameObject:
   - component: {fileID: 2051783372}
   - component: {fileID: 2051783374}
   - component: {fileID: 2051783373}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,6 +10,8 @@ public class PlayerJumper : MonoBehaviour
     public float SpeedHorizontal;
     public float PressTimeToMaxJump;
     public float WallSlideSpeed = 1;
+    public int MaxJumps = 2;
+    public int JumpsDone = 1;
     public ContactFilter2D filter;
 
     private Rigidbody2D _rigidbody;
@@ -23,6 +25,8 @@ public class PlayerJumper : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _collisionDetection = GetComponent<CollisionDetection>();
+
+        Powerups.OnPowerupCollected += OnPowerupCollected;
     }
 
     void FixedUpdate()
@@ -30,20 +34,26 @@ public class PlayerJumper : MonoBehaviour
         if (IsPeakReached()) TweakGravity();
 
         if (IsWallSliding) SetWallSlide();
+        
+        if (_collisionDetection.IsGrounded) {JumpsDone = 1;}
     }
 
     // NOTE: InputSystem: "JumpStarted" action becomes "OnJumpStarted" method
     public void OnJumpStarted()
     {
-        SetGravity();
-        var vel = new Vector2(_rigidbody.linearVelocity.x, GetJumpForce());
-        _rigidbody.linearVelocity = vel;
-        _jumpStartedTime = Time.time;
+        if (JumpsDone != MaxJumps) {
+            JumpsDone++;
+            SetGravity();
+            var vel = new Vector2(_rigidbody.linearVelocity.x, GetJumpForce());
+            _rigidbody.linearVelocity = vel;
+            _jumpStartedTime = Time.time;
+        }
     }
 
     // NOTE: InputSystem: "JumpFinished" action becomes "OnJumpFinished" method
     public void OnJumpFinished()
     {
+        JumpsDone = 0;
         float fractionOfTimePressed = 1 / Mathf.Clamp01((Time.time - _jumpStartedTime) / PressTimeToMaxJump);
         _rigidbody.gravityScale *= fractionOfTimePressed;
     }
@@ -97,5 +107,11 @@ public class PlayerJumper : MonoBehaviour
         Physics2D.Raycast(transform.position, Vector2.down, filter, hit, 10);
 
         return hit[0].distance;
+    }
+
+    public void OnPowerupCollected(Powerups _powerup) {
+        if (_powerup.Power == "higherJump") {
+            JumpHeight = JumpHeight+1;
+        }
     }
 }
