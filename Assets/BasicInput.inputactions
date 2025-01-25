@@ -175,6 +175,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Quit",
+            "id": "b5ddecdb-340d-4638-95d7-5af01a417cf3",
+            "actions": [
+                {
+                    "name": "Quit",
+                    "type": "Button",
+                    "id": "4f98b41e-13da-4e98-a0ea-eee04080e091",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Quit1",
+                    "type": "Button",
+                    "id": "ca911b15-e4bd-457a-bf0c-030abbcf6992",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "449b82b7-70d2-4e72-a23b-4916a1963c7b",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Quit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eb474ac8-61e5-4217-9c42-22b25d52c98a",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Quit1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
