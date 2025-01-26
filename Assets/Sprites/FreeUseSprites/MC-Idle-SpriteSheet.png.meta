@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 3151f156aa1f72b4fb624ac47377eed4
+guid: dc8b8034ea54b7f4bbf549dbc0e9f1db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9087739735445319688
-    second: frame_12_delay-0.08s_0
+      213: -3135618809387408386
+    second: MC-Idle-SpriteSheet_0
+  - first:
+      213: -3798662291337753644
+    second: MC-Idle-SpriteSheet_1
+  - first:
+      213: 2007781135145253750
+    second: MC-Idle-SpriteSheet_2
+  - first:
+      213: -3048628249992213647
+    second: MC-Idle-SpriteSheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: frame_12_delay-0.08s_0
+      name: MC-Idle-SpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 39
-        y: 29
-        width: 302
-        height: 392
+        x: 2
+        y: 0
+        width: 28
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 800bb66f3232e1e70800000000000000
-      internalID: 9087739735445319688
+      spriteID: ef32e6b5e4b0c74d0800000000000000
+      internalID: -3135618809387408386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC-Idle-SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db442fa5c0784bc0800000000000000
+      internalID: -3798662291337753644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC-Idle-SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67b30130e421ddb10800000000000000
+      internalID: 2007781135145253750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC-Idle-SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b4efa42c811b5d0800000000000000
+      internalID: -3048628249992213647
       vertices: []
       indices: 
       edges: []
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      frame_12_delay-0.08s_0: 9087739735445319688
+      MC-Idle-SpriteSheet_0: -3135618809387408386
+      MC-Idle-SpriteSheet_1: -3798662291337753644
+      MC-Idle-SpriteSheet_2: 2007781135145253750
+      MC-Idle-SpriteSheet_3: -3048628249992213647
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

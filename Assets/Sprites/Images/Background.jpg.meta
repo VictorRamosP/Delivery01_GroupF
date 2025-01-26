@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3151f156aa1f72b4fb624ac47377eed4
+guid: e1f20810dd10e6f408fdc116c8691413
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9087739735445319688
-    second: frame_12_delay-0.08s_0
+      213: -5696307274425662455
+    second: pixel-background-forest-games-mobile-260nw-1398247436_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: frame_12_delay-0.08s_0
+      name: pixel-background-forest-games-mobile-260nw-1398247436_0
       rect:
         serializedVersion: 2
-        x: 39
-        y: 29
-        width: 302
-        height: 392
+        x: 0
+        y: 0
+        width: 430
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 800bb66f3232e1e70800000000000000
-      internalID: 9087739735445319688
+      spriteID: 9048268d6b6a2f0b0800000000000000
+      internalID: -5696307274425662455
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      frame_12_delay-0.08s_0: 9087739735445319688
+      pixel-background-forest-games-mobile-260nw-1398247436_0: -5696307274425662455
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

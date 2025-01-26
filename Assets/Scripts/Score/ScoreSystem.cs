@@ -18,11 +18,13 @@ public class ScoreSystem : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
     }
 
     private void Start()
     {
+        ResetScoreIfNeeded();
         OnScoreUpdated?.Invoke(Score);
     }
 
@@ -41,12 +43,20 @@ public class ScoreSystem : MonoBehaviour
     private void UpdateScore(Coins coin)
     {
         Score += coin.value;
-        
         OnScoreUpdated?.Invoke(Score);
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        OnScoreUpdated?.Invoke(Score); // UI se actualiza al cargar la escena
+        ResetScoreIfNeeded();
+        OnScoreUpdated?.Invoke(Score);
+    }
+
+    private void ResetScoreIfNeeded()
+    {
+        if (SceneManager.GetActiveScene().name == "Gameplay")
+        {
+            Score = 0; //RestarScore
+        }
     }
 }

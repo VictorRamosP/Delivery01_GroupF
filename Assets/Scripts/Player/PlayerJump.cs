@@ -48,8 +48,9 @@ public class PlayerJumper : MonoBehaviour
     // NOTE: InputSystem: "JumpStarted" action becomes "OnJumpStarted" method
     public void OnJumpStarted()
     {
-        audioManager.PlaySFX(audioManager.jump);
         if (JumpsDone != MaxJumps) {
+            audioManager.PlaySFX(audioManager.jump);
+
             JumpsDone++;
             SetGravity();
             var vel = new Vector2(_rigidbody.linearVelocity.x, GetJumpForce());
