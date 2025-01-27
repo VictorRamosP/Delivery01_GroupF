@@ -1100,11 +1100,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac7a4534458d29e4baaeef1d6ff2edc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 52629076}
+  MusicSource: {fileID: 52629076}
   SFXSource: {fileID: 482923617}
-  background: {fileID: 8300000, guid: a5a3cafe43a7c78478d23102be439fb4, type: 3}
-  jump: {fileID: 0}
-  coin: {fileID: 0}
+  Background: {fileID: 8300000, guid: 7e0981fa254a3e9468fd44bd697e78c8, type: 3}
+  Jump: {fileID: 0}
+  Coin: {fileID: 0}
 --- !u!4 &966790814
 Transform:
   m_ObjectHideFlags: 0
