@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] AudioSource musicSource;
+    [SerializeField] AudioSource MusicSource;
     [SerializeField] AudioSource SFXSource;
 
-    public AudioClip background;
-    public AudioClip jump;
-    public AudioClip coin;
+    public AudioClip Background;
+    public AudioClip Jump;
+    public AudioClip Coin;
 
     private void Start()
     {
-        musicSource.clip = background;
-        musicSource.Play();
+        MusicSource.clip = Background;
+        MusicSource.Play();
     }
 
     public void PlaySFX(AudioClip clip)

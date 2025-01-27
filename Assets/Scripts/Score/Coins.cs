@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class Coins : MonoBehaviour
 {
-    public int value;
+    public int Value;
 
     public static Action<Coins> OnCoinCollected;
 
-    AudioManager audioManager;
+    AudioManager AudioManager;
 
     private void Awake()
     {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        AudioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            audioManager.PlaySFX(audioManager.coin);
+            AudioManager.PlaySFX(AudioManager.Coin);
             OnCoinCollected?.Invoke(this);
             Destroy(gameObject);
         }

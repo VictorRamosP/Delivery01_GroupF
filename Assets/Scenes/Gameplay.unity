@@ -815,18 +815,18 @@ MonoBehaviour:
   WallSlideSpeed: 1
   MaxJumps: 2
   JumpsDone: 0
-  filter:
+  Filter:
     useTriggers: 0
-    useLayerMask: 1
+    useLayerMask: 0
     useDepth: 0
     useOutsideDepth: 0
     useNormalAngle: 0
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 256
+      m_Bits: 0
     minDepth: 0
-    maxDepth: 100
+    maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
 --- !u!1001 &164994798
@@ -2090,8 +2090,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FollowSpeed: 5
-  yOffset: 1
-  target: {fileID: 155923685}
+  YOffset: 1
+  Target: {fileID: 155923685}
 --- !u!1 &532141429
 GameObject:
   m_ObjectHideFlags: 0
@@ -3620,11 +3620,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac7a4534458d29e4baaeef1d6ff2edc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 546894350}
+  MusicSource: {fileID: 546894350}
   SFXSource: {fileID: 1913850810}
-  background: {fileID: 8300000, guid: 7e0981fa254a3e9468fd44bd697e78c8, type: 3}
-  jump: {fileID: 8300000, guid: c53b737decf49754485de765e1bef2c1, type: 3}
-  coin: {fileID: 8300000, guid: 06b22bbf40c584d4ebb58f5a41af464e, type: 3}
+  Background: {fileID: 8300000, guid: 7e0981fa254a3e9468fd44bd697e78c8, type: 3}
+  Jump: {fileID: 8300000, guid: c53b737decf49754485de765e1bef2c1, type: 3}
+  Coin: {fileID: 8300000, guid: 06b22bbf40c584d4ebb58f5a41af464e, type: 3}
 --- !u!4 &1331646797
 Transform:
   m_ObjectHideFlags: 0

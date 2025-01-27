@@ -12,7 +12,7 @@ public class PlayerJumper : MonoBehaviour
     public float WallSlideSpeed = 1;
     public int MaxJumps = 2;
     public int JumpsDone = 1;
-    public ContactFilter2D filter;
+    public ContactFilter2D Filter;
 
     private Rigidbody2D _rigidbody;
     private CollisionDetection _collisionDetection;
@@ -21,11 +21,11 @@ public class PlayerJumper : MonoBehaviour
 
     bool IsWallSliding => _collisionDetection.IsTouchingFront;
 
-    AudioManager audioManager;
+    AudioManager AudioManager;
 
     private void Awake()
     {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        AudioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     void Start()
@@ -49,7 +49,7 @@ public class PlayerJumper : MonoBehaviour
     public void OnJumpStarted()
     {
         if (JumpsDone != MaxJumps) {
-            audioManager.PlaySFX(audioManager.jump);
+            AudioManager.PlaySFX(AudioManager.Jump);
 
             JumpsDone++;
             SetGravity();
@@ -113,7 +113,7 @@ public class PlayerJumper : MonoBehaviour
     {
         RaycastHit2D[] hit = new RaycastHit2D[3];
 
-        Physics2D.Raycast(transform.position, Vector2.down, filter, hit, 10);
+        Physics2D.Raycast(transform.position, Vector2.down, Filter, hit, 10);
 
         return hit[0].distance;
     }

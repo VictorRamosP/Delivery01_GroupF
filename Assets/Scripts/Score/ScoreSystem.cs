@@ -6,13 +6,13 @@ public class ScoreSystem : MonoBehaviour
 {
     public int Score;
     public static Action<int> OnScoreUpdated;
-    private static ScoreSystem instance;
+    private static ScoreSystem Instance;
 
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject); // Mantiene este objeto en todas las escenas
         }
         else
@@ -42,7 +42,7 @@ public class ScoreSystem : MonoBehaviour
 
     private void UpdateScore(Coins coin)
     {
-        Score += coin.value;
+        Score += coin.Value;
         OnScoreUpdated?.Invoke(Score);
     }
 
